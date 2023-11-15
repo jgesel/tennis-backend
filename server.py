@@ -15,7 +15,8 @@ CONNECTION = psycopg2.connect(
       user=os.environ.get("DBUSER"),
       password=os.environ.get("PASSWORD"),
       host=os.environ.get("HOST"),
-      port=os.environ.get("DBPORT")
+      port=os.environ.get("DBPORT"),
+      sslmode='require'
   )
 
 print("Connected to DB!")
