@@ -12,11 +12,11 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['Access-Control-Allow-Origin'] = '*'
 
 CONNECTION = psycopg2.connect(
-      dbname=configs.dbname,
-      user=configs.user,
-      password=configs.password,
-      host=configs.host,
-      port=configs.port
+      dbname=os.environ.get("DBNAME"),
+      user=os.environ.get("DBUSER"),
+      password=os.environ.get("PASSWORD")
+      host=configs.os.environ.get("HOST"),
+      port=configs.os.environ.get("DBPORT")
   )
 
 print("Connected to DB!")
