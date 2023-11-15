@@ -14,8 +14,8 @@ CONNECTION = psycopg2.connect(
       dbname=os.environ.get("DBNAME"),
       user=os.environ.get("DBUSER"),
       password=os.environ.get("PASSWORD"),
-      host=configs.os.environ.get("HOST"),
-      port=configs.os.environ.get("DBPORT")
+      host=os.environ.get("HOST"),
+      port=os.environ.get("DBPORT")
   )
 
 print("Connected to DB!")
